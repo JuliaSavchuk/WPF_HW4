@@ -1,0 +1,64 @@
+﻿<Window x:Class="WPF_HW4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_HW4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="500"
+        Background="#F4DBE9"
+        ResizeMode="CanMinimize">
+
+    <Window.Resources>
+        <Style x:Key="GameButton" TargetType="Button">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Foreground" Value="#D84563"/>
+            <Setter Property="Background" Value="#F4DBE9"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#FA9BCF"/>
+        </Style>
+
+        <Style x:Key="SLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="28"/>
+            <Setter Property="Foreground" Value="#D84563"/>
+            <Setter Property="Background" Value="#F4DBE9"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="BorderBrush" Value="#FA9BCF"/>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid x:Name="MainGrid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Player X: 0" x:Name="PlayerXScore" Style="{StaticResource SLabel}"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Draw: 0" x:Name="DrawGame" Style="{StaticResource SLabel}"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Player O: 0" x:Name="PlayerOScore" Style="{StaticResource SLabel}"/>
+
+        <Button Tag="0" Grid.Column="0" Grid.Row="1" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+        <Button Tag="1" Grid.Column="1" Grid.Row="1" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+        <Button Tag="2" Grid.Column="2" Grid.Row="1" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+
+        <Button Tag="3" Grid.Column="0" Grid.Row="2" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+        <Button Tag="4" Grid.Column="1" Grid.Row="2" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+        <Button Tag="5" Grid.Column="2" Grid.Row="2" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+
+        <Button Tag="6" Grid.Column="0" Grid.Row="3" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+        <Button Tag="7" Grid.Column="1" Grid.Row="3" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+        <Button Tag="8" Grid.Column="2" Grid.Row="3" Style="{StaticResource GameButton}" Click = "OnButtonClick"/>
+
+    </Grid>
+</Window>
+
